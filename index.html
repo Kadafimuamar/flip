@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game screen</title>
+    <link rel="stylesheet" href="./Ver3/css/GameScreen.css">
+    <link rel="stylesheet" href="./Ver3/css/Timer.css">
+    <link rel="stylesheet" href="./Ver3/css/GameWrapper.css">
+    <link rel="stylesheet" href="./Ver3/css/loading.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div class="round" id="roundBox">
+        <span id="roundText">Test</span>
+    </div>
+
+    <div class="modal-overlay"></div>
+    <div class="modal">
+        Items Acquired
+        <div class="modal-content"></div>
+    </div>
+
+    <div class="container">
+        <!-- Top container -->
+        <div class="top-container">
+            <button class="back-button" onclick="location.reload()">◀ Refresh</button>
+            <div class="score-board">
+                <div>Tectra Ranking <span id="rank-text"></span></div>
+                <div>Score <span id="score-text">0</span> Point</div>
+            </div>
+            <!-- Circular progressive timer -->
+            <div class="timer-container">
+                <div id="timer" class="timer">
+                    <div id="timerDisplay">Timer</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 게임 영역 -->
+        <div class="game-wrapper">
+            <!-- 카드 컨테이너 -->
+            <div class="flip"></div>
+
+            <!-- 아이템 슬롯 컨테이너 -->
+            <div class="item-container">
+                <div class="item-text">Item</div>
+                <div class="items" id="items"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Ver3/js/GameScreen.js"></script>
+</body>
+</html>
